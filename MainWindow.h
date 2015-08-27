@@ -27,7 +27,7 @@ private slots:
     void keyPressEvent(QKeyEvent* e);
 private:
     Ui::MainWindow* ui;
-    SM::DATFile* outputFile;
+    ME::DATFile* outputFile;
     QStringList fileNames;
 };
 

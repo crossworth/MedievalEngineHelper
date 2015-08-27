@@ -12,6 +12,9 @@ TARGET = MedievalEngineHelper
 TEMPLATE = app
 
 
+QMAKE_CXXFLAGS += -std=gnu++1y
+
+
 SOURCES += main.cpp\
         MainWindow.cpp \
     DATFile.cpp

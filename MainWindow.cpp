@@ -4,7 +4,7 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
     ui->pushButton->setEnabled(false);
-    outputFile = new SM::DATFile;
+    outputFile = new ME::DATFile;
 }
 
 MainWindow::~MainWindow() {
@@ -21,7 +21,7 @@ void MainWindow::on_pushButton_2_clicked() {
 
     if (files.exec()) {
         if (!outputFile) {
-            outputFile = new SM::DATFile;
+            outputFile = new ME::DATFile;
         }
 
         fileNames = files.selectedFiles();
@@ -90,7 +90,7 @@ void MainWindow::on_pushButton_3_clicked() {
         QString fileIn = file.selectedFiles()[0];
 
         if (!outputFile) {
-            outputFile = new SM::DATFile;
+            outputFile = new ME::DATFile;
         }
 
         outputFile->openFile(fileIn.toStdString());
